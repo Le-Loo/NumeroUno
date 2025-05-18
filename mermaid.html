@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <title>Le Loo</title>
+  </head>
+  <body>
+    <header>
+      <h1>Decision tree</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Decision tree</h2>
+        <!-- prettier-ignore -->
+        <div class="mermaid">
+          graph TD
+          A[Start] --> B{Is it a fruit?}
+          B -- Yes --> C{Is it red?}
+          B -- No --> D{Is it a vegetable?}
+          C -- Yes --> E[Apple]
+          C -- No --> F[Banana]
+          D -- Yes --> G[Carrot]
+          D -- No --> H[Unknown]
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  </body>
+</html>
